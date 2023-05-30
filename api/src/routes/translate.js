@@ -4,9 +4,9 @@ const openai = require("./openai");
 const router = Router();
 
 router.get("/", async(req, res, next) => {
+    let { text, destLang } = req.body;
+    
     try {
-        let { text, destLang } = req.body;
-        
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `Translate this into ${destLang}: ${text}`,

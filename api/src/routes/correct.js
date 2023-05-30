@@ -6,9 +6,9 @@ const router = Router();
 
 
 router.get("/", async(req, res, next) => {
+    let { text } = req.body;
+    
     try {
-        let { text } = req.body;
-
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `Correct this in the language that is: ${text}`,
