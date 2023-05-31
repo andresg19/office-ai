@@ -5,14 +5,14 @@ const fs = require("fs");
 const router = Router();
 
 router.get("/", async(req, res, next) => {
-    let { text } = req.body;
+    let { text } = req.query;
 
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: text,
             temperature: 0,
-            max_tokens: 100,
+            max_tokens: 1000,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
