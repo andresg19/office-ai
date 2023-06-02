@@ -33,7 +33,7 @@ const Translator = () => {
         </select>
         <button className={styles.btn} onClick={handleDispatch}>Translate</button>
         </div>
-        <div className={styles.ouput}>
+        <div className={styles.output}>
             {
                 loader === true?
                 ( <img src={loadGif} alt="load not found" /> ) :

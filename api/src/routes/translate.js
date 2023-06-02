@@ -18,7 +18,7 @@ router.get("/", async(req, res, next) => {
         });
         res.status(200).send(response.data.choices[0].text)
     } catch (error) {
-        next(error)
+        res.status(500).send(error);
     }
 });
 

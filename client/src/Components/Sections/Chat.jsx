@@ -33,7 +33,7 @@ const Chat = () => {
             </div>
         <div className={styles.send}>
         <input className={styles.input} placeholder='Insert text' onChange={(e) => setText(e.target.value)} />
-        <button onClick={handleDispatch}>send</button>
+        <button className={styles.btn} onClick={handleDispatch}>send</button>
         </div>
     </div>  
     );

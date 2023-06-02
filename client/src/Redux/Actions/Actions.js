@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CORRECT_TEXT, TRANSLATE ,LOADER, CHAT } from "./ActionTypes";
+import { CORRECT_TEXT, TRANSLATE ,LOADER, CHAT, CLEAR } from "./ActionTypes";
 
 export const correctText = ( text ) => {
     return async function (dispatch) {
@@ -10,7 +10,10 @@ export const correctText = ( text ) => {
                 payload: result.data
             });
         } catch (error) {
-            console.log(error);
+            return dispatch({
+                type: CORRECT_TEXT,
+                payload: "I'm sorry, I can't assist you regarding the provided text."
+            });
         }
     };
 };
@@ -25,7 +28,10 @@ export const translateText = ( text, destLang ) => {
                 payload: result.data
             });
         } catch (error) {
-            console.log(error);
+             return dispatch({
+                type: TRANSLATE,
+                payload: "I'm sorry, I can't assist you regarding the provided text."
+            });
         }
     };
 };
@@ -40,7 +46,10 @@ export const chat = ( text ) => {
             });
             
         } catch (error) {
-            console.log(error)
+            return dispatch({
+                type: CORRECT_TEXT,
+                payload: "I'm sorry, I can't assist you regarding the provided text."
+            });
         }
     };
 }
@@ -50,6 +59,19 @@ export const loaderOn = () => {
         try {
             return dispatch({
                 type: LOADER,
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    };
+};
+
+export const clearStates = (payload) => {
+    return async function(dispatch) {
+        try {
+            return dispatch({
+                type: CLEAR,
+                payload: payload
             })
         } catch (error) {
             console.log(error)

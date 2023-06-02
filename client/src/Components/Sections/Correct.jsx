@@ -21,7 +21,7 @@ const Correct = () => {
         <textarea className={styles.input} placeholder='Insert text' onChange={(e) => setText(e.target.value)}>
         </textarea>
         <button className={styles.btn} onClick={handleDispatch}>Correct</button>
-        <div className={styles.ouput}>
+        <div className={styles.output}>
             {
                 loader === true?
                 ( <img src={loadGif} alt="load not found" /> ) :

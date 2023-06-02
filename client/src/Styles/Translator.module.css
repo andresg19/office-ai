@@ -20,19 +20,26 @@ border-radius:10px;
   }
 
   .input {
-    background-color: #808D97;
+    background-color: #808d9715;
+    
     width: 45%;
     overflow-y: scroll;
     resize: none;
     outline: none;
+    border: none;
     border-radius:10px;
 -moz-border-radius:10px;
 -webkit-border-radius:10px;
 text-align: left;
+color: #797585;
+font-size: 14px;
+line-height: 1.5;
+
   }
 
-  .ouput {
-    background-color: #808D97;
+  .output {
+    background-color: #808d9715;
+    border: none;
     width: 45%;
     overflow-y: scroll;
     border-radius:10px;
@@ -42,26 +49,54 @@ text-align: left;
 
   }
 
-  .ouput img {
-    width: 12%;
+  .output img {
+    width: 5%;
     margin-left: 2%;
+  }
+
+  .output p {
+color: #797585;
+font-size: 14px;
+line-height: 1.5;
+
   }
 
   .settings {
     display: grid;
   }
+
+
   .btn {
     height: max-content;
     margin-left: auto;
     margin-right: auto;
-  }
+    background-color: #1712284b;
+color: #797585;
+border: solid 0.5px;
+outline: none;
+border-color: rgba(0, 0, 0, 0.294);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.btn:focus {
+    background-color: #1e153c;
+    
+}
 
  .select {
   margin-top: 50%;
   height: max-content;
+  outline: none;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
+  background-color: #1712284b;
+border: solid 0.5px;
+border-color: rgba(0, 0, 0, 0.294);
+color: #797585;
+
  }
 
   
@@ -78,4 +113,23 @@ text-align: left;
     40%{ transform: perspective(400px) rotateX(-10deg); }
     70%{ transform: perspective(400px) rotateX(10deg); }
     100%{ opacity: 1; transform: perspective(400px) rotateX(0deg); }
+    }
+
+
+    @media screen and (min-width: 490px) and (max-width: 720px) { 
+      .container {
+        width: 100%;
+      }
+      .input{
+        font-size: 12px;
+      }
+      .output p{
+        font-size: 12px;
+      }
+      .btn {
+        font-size: 12px;
+      }
+      .select {
+        font-size: 10px;
+      }
     }
