@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../Styles/Chat.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { chat, loaderOn } from '../../Redux/Actions/Actions';
+import { chat, clearStates, loaderOn } from '../../Redux/Actions/Actions';
 import loadGif from '../../assets/load.gif'
 
 const Chat = () => {
@@ -11,10 +11,15 @@ const Chat = () => {
     const dispatch = useDispatch();
 
 
+
     const handleDispatch = (e) => {
         e.preventDefault();
-        dispatch(chat(text));
-        dispatch(loaderOn());
+            dispatch(chat(text));
+            dispatch(loaderOn());
+    };
+    const handleReload = (e) => {
+        e.preventDefault();
+            dispatch(clearStates());
     };
 
     return ( 
@@ -25,15 +30,17 @@ const Chat = () => {
                 loader === true?
                 ( <img src={loadGif} alt="load not found" /> ) :
                 response.length ?
-                ( <p>{response}</p> ) :
+                ( <p>{response}</p>
+                ) :
                 null
             }
         </p>
-
+        
             </div>
         <div className={styles.send}>
         <input className={styles.input} placeholder='Insert text' onChange={(e) => setText(e.target.value)} />
-        <button className={styles.btn} onClick={handleDispatch}>send</button>
+                <button className={styles.btn} onClick={handleDispatch}>send</button>
+
         </div>
     </div>  
     );

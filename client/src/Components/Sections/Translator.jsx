@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import loadGif from '../../assets/load.gif';
 import styles from '../../Styles/Translator.module.css'
 import { idioms } from '../../assets/lang';
-import { loaderOn, translateText } from '../../Redux/Actions/Actions';
+import { clearStates, loaderOn, translateText } from '../../Redux/Actions/Actions';
 
 const Translator = () => {
     const [text, setText] = useState('');

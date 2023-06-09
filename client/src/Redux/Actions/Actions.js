@@ -67,12 +67,11 @@ export const loaderOn = () => {
     };
 };
 
-export const clearStates = (payload) => {
+export const clearStates = () => {
     return async function(dispatch) {
         try {
             return dispatch({
                 type: CLEAR,
-                payload: payload
             })
         } catch (error) {
             console.log(error)

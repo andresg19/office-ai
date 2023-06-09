@@ -1,4 +1,4 @@
-import { LOADER, CORRECT_TEXT, TRANSLATE, CHAT } from "../Actions/ActionTypes";
+import { LOADER, CORRECT_TEXT, TRANSLATE, CHAT, CLEAR } from "../Actions/ActionTypes";
 
 const initialState = {
     correctOutput: [],
@@ -31,6 +31,11 @@ export default function rootReducer(state = initialState, {type, payload}) {
                 return {
                 ...state,
                 load: true,
+                }
+            case CLEAR: 
+                return {  
+                    ...state,
+                    chat: [],
                 }
         default:
             return state;
