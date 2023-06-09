@@ -1,10 +1,12 @@
 import axios from "axios";
 import { CORRECT_TEXT, TRANSLATE ,LOADER, CHAT, CLEAR } from "./ActionTypes";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const correctText = ( text ) => {
     return async function (dispatch) {
         try {
-            let result = await axios.get(`http://localhost:3001/correct?text=${text}`);
+            let result = await axios.get(`${process.env.SERVER_URL}/correct?text=${text}`);
             return dispatch({
                 type: CORRECT_TEXT,
                 payload: result.data
@@ -22,7 +24,7 @@ export const correctText = ( text ) => {
 export const translateText = ( text, destLang ) => {
     return async function (dispatch) {
         try {
-            let result = await axios.get(`http://localhost:3001/translate?text=${text}&destLang=${destLang}`);
+            let result = await axios.get(`${process.env.SERVER_URL}/translate?text=${text}&destLang=${destLang}`);
             return dispatch({
                 type: TRANSLATE,
                 payload: result.data
@@ -39,7 +41,7 @@ export const translateText = ( text, destLang ) => {
 export const chat = ( text ) => {
     return async function (dispatch) {
         try {
-            let result = await axios.get(`http://localhost:3001/chat?text=${text}`);
+            let result = await axios.get(`${process.env.SERVER_URL}/chat?text=${text}`);
             return dispatch({
                 type: CHAT,
                 payload: result.data
