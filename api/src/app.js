@@ -19,7 +19,7 @@ server.use(cookieParser());
 server.use(morgan("dev"));
 
 server.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://office-ai-server.vercel.app");
+    res.header("Access-Control-Allow-Origin", string);
     res.header("Access-Control-Allow-Credentials", "true");
     res.header(
         "Access-Control-Allow-Headers",
