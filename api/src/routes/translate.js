@@ -9,7 +9,7 @@ router.get("/", async(req, res, next) => {
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `Translate this into ${destLang}: ${text}`,
+            prompt: `Lea el siguiente texto entre comillas "${text}", traduzcalo al ${destLang}`,
             temperature: 0.3,
             max_tokens: 1500,
             top_p: 1.0,
