@@ -33,7 +33,9 @@ const Home = () => {
                     ( <p className={styles.choose}>Choose an option</p> )
                 }
             </section>
-
+        <footer className={styles.footer}>
+            <p>@Andrés Germain dev</p>
+        </footer>
         </main>
      );
 }

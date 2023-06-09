@@ -133,3 +133,27 @@ color: #797585;
         font-size: 10px;
       }
     }
+
+    @media screen and (min-width: 200px) and (max-width: 490px) {
+      .container {
+        margin-top: 10%;
+        display: flex;
+  flex-direction: column;
+      }
+
+      .input, .output {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 93%;
+        height: 22vh;
+      }
+     
+      .btn, .select {
+        margin: 5px;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        }
+  
+    
+    }

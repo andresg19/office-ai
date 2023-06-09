@@ -106,3 +106,10 @@ border-color: rgba(0, 0, 0, 0.294);
         font-size: 12px;
       }
     }
+
+    @media screen and (min-width: 200px) and (max-width: 490px) {
+      .container {
+        margin-top: 10%;
+        width: 90%;
+      }
+    }
