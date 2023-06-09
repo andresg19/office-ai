@@ -110,3 +110,19 @@ border-color: rgba(0, 0, 0, 0.294);
         font-size: 12px;
       }
     }
+
+    
+    @media screen and (min-width: 200px) and (max-width: 490px) { 
+      .container {
+        width: 100%;
+      }
+      .input{
+        font-size: 12px;
+      }
+      .output p {
+        font-size: 12px;
+      }
+      .btn {
+        font-size: 12px;
+      }
+    }
