@@ -10,7 +10,7 @@ router.get("/", async(req, res, next) => {
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `${text}`,
+            prompt: text,
             temperature: 0,
             max_tokens: 2000,
             top_p: 1.0,
