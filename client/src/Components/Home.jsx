@@ -13,7 +13,9 @@ const Home = () => {
         <main>
             <header>
             <h1 className={styles.title}>Office AI</h1>
-            <p className={styles.about}>With Office AI, you will have the option to correct and edit text or simply ask frequently asked questions in one place.</p>
+            <div className={styles.about}>
+            <p>With Office AI, you will have the option to correct and edit text or simply ask frequently asked questions in one place.</p>
+            </div>
             </header>
 
             <section>
