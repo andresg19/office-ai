@@ -1,7 +1,6 @@
 import axios from "axios";
 import { CORRECT_TEXT, TRANSLATE ,LOADER, CHAT, CLEAR } from "./ActionTypes";
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 export const correctText = ( text ) => {
     return async function (dispatch) {
