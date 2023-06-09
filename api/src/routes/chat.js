@@ -9,8 +9,8 @@ router.get("/", async(req, res, next) => {
 
     try {
         const response = await openai.createCompletion({
-            model: "gpt-3.5-turbo",
-            prompt: text,
+            model: "text-davinci-003",
+            prompt: `Analyze and interpret the following text between brackets: ${text}, then answer as if you were a chatbot`,
             temperature: 0,
             max_tokens: 2000,
             top_p: 1.0,
