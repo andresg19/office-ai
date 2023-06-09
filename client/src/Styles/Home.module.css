@@ -29,9 +29,6 @@ margin-right: auto;
      .about {
           font-size: 12px;
      }
-     .choose {
-          font-size: 11px;
-     }
    }
 
    @media screen and (min-width: 490px) and (max-width: 720px) {
@@ -41,21 +38,13 @@ margin-right: auto;
      .about {
           font-size: 9px;
      }
-     .choose {
-          font-size: 8px;
-     }
    }
 
    @media screen and (min-width: 200px) and (max-width: 490px) {
      .title {
           font-size: 15px;
-          white-space: pre-wrap;
      }
      .about {
-          font-size: 9px;
-          font-weight: 500;
-     }
-     .choose {
-          font-size: 14px;
+          font-size: 7px;
      }
    }
