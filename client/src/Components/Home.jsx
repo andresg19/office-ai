@@ -34,7 +34,7 @@ const Home = () => {
                 }
             </section>
         <footer className={styles.footer}>
-            <p>@Andrés Germain dev</p>
+            <a href='https://www.linkedin.com/in/andres-germain-dev/' >@Andrés Germain dev</a>
         </footer>
         </main>
      );
