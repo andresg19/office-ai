@@ -11,9 +11,9 @@ router.get("/", async(req, res, next) => {
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `Analyze the following text and correct its spelling errors. Additionally, if it is disordered, organize it. Detect its original language and return the correction in the same language: ${text}`,
+            prompt: `Analyze and interpret the following text within braces: ${text}. Tell me the original language of the analyzed text and return the same grammatically and linguistically corrected.`,
             temperature: 0,
-            max_tokens: 1000,
+            max_tokens: 1500,
             top_p: 1.0,
             frequency_penalty: 0.0,
             presence_penalty: 0.0,
