@@ -8,7 +8,6 @@ import styles from '../Styles/Home.module.css';
 
 const Home = () => {
     const [section, setSections] = useState('');
-    console.log(section)
     return ( 
         <main>
             <header>
